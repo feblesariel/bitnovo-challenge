@@ -1,0 +1,149 @@
+{
+	"info": {
+		"_postman_id": "3af16a3c-c0ae-40c7-97dd-dab7ed4245a4",
+		"name": "TPV - TEST Prueba Técnica",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Pagos",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Merchant-Id",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"expected_output_amount\": 0.10,\n    \"input_currency\": \"BTC_TEST\",\n    \"merchant_urlok\": \"https://bitnovo.com/ok\",\n    \"merchant_urlko\": \"https://bitnovo.com/ko\",\n    \"notes\": \"Pruebas Técnica\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://payments.smsdata.com/api/v1/orders/",
+					"protocol": "https",
+					"host": [
+						"payments",
+						"smsdata",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"orders",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pagos",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Merchant-Id",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://payments.smsdata.com/api/v1/orders/",
+					"protocol": "https",
+					"host": [
+						"payments",
+						"smsdata",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"orders",
+						""
+					],
+					"query": [
+						{
+							"key": "start",
+							"value": "2021/12/14",
+							"disabled": true
+						},
+						{
+							"key": "end",
+							"value": "2022/01/10",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Info Pago",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Merchant-Id",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://payments.smsdata.com/api/v1/orders/info/0946f02d-cf04-4180-826d-f4c043ec6cfe",
+					"protocol": "https",
+					"host": [
+						"payments",
+						"smsdata",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"orders",
+						"info",
+						"0946f02d-cf04-4180-826d-f4c043ec6cfe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Currencies",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Merchant-Id",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://payments.smsdata.com/api/v1/currencies",
+					"protocol": "https",
+					"host": [
+						"payments",
+						"smsdata",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"currencies"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
