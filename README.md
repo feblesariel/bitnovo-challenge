@@ -1,6 +1,6 @@
 ## Descripción
 
-Aplicacion realizada para la prueba tecnica en Bitnovo.<br>
+Prueba tecnica Bitnovo.<br>
 
 "El desarrollo consiste en crear una pasarela de pago con criptodivisas. Esta se va a realizar
 en un entorno de testnet. Hay que desarrollar principalmente dos
@@ -29,7 +29,7 @@ Install
 Start
 
 ```
-    npm test
+  npm test
 
 ```
 
