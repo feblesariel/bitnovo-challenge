@@ -16,6 +16,7 @@ ejs<br>
 express<br>
 method-override<br>
 node-fetch<br>
+nodemon<br>
 
 ## Iniciar aplicación
 
